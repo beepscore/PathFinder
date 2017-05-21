@@ -11,6 +11,16 @@ import XCTest
 
 class PathFinderTests: XCTestCase {
 
+    func testNumberOfUniquePaths0r0c() {
+        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:0, columns:0)
+        XCTAssertEqual(numberOfUniquePaths, 0)
+    }
+
+    func testNumberOfUniquePaths1r1c() {
+        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:1, columns:1)
+        XCTAssertEqual(numberOfUniquePaths, 0)
+    }
+
     func testNumberOfUniquePaths2r2c() {
         let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:2, columns:2)
         XCTAssertEqual(numberOfUniquePaths, 2)

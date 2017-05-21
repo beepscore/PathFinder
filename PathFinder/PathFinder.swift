@@ -23,7 +23,6 @@ class PathFinder: NSObject {
             return numberOfUniquePaths(rows: rows, columns: columns - 1)
         }
 
-        // moveRightIfPossible
         if columns < 2 {
             // can't move right, move down
             return numberOfUniquePaths(rows: rows - 1, columns: columns)

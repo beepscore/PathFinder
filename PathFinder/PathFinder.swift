@@ -10,33 +10,7 @@ import Foundation
 
 class PathFinder: NSObject {
 
-/*
-
- A Turtle is placed on the top left corner of a m by n grid. The turtle can only move right or move down by one cell at a time. Implement the method that computes the total number of unique paths that the turtle can take to reach the bottom right corner.
-
- */
-
-    // entire board is clear, no obstacles
-    
-
-// m + n - 2 moves
-// m - 1 moves horizontally, n -1 moves vertically
-// C(m-1, m+n-2) = (m+n-2) * (m+n-3) * (m+n-4).... * ((m+n-2) - (m-1) +1) / (m-1)!
-
-//  struct Position(row:Int, column:Int) {
-//    self.row = row
-//    self.column = column
-//  }
-
     class func numberOfUniquePaths(rows: Int, columns: Int) -> Int {
-
-        // first move has 2 choices- right or down
-        // each path takes m-1 steps left plus n-1 steps down
-
-        // could represent each path as a (m-1)+(n-1) digit binary number
-        // where left is 0 and down is 1
-        // uniquePaths = []
-        // 10
 
         // base case
         if (rows == 1 && columns == 1) {

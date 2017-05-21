@@ -31,6 +31,7 @@
 		DEF589841ED221520009B13B /* PathFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFinderTests.swift; sourceTree = "<group>"; };
 		DEF589861ED221520009B13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF589901ED221820009B13B /* PathFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinder.swift; sourceTree = "<group>"; };
+		DEF589921ED227BF0009B13B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		DEF5896C1ED221520009B13B = {
 			isa = PBXGroup;
 			children = (
+				DEF589921ED227BF0009B13B /* README.md */,
 				DEF589781ED221520009B13B /* PathFinder */,
 				DEF589831ED221520009B13B /* PathFinderTests */,
 				DEF589771ED221520009B13B /* Products */,
@@ -83,8 +85,8 @@
 		DEF589831ED221520009B13B /* PathFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEF589841ED221520009B13B /* PathFinderTests.swift */,
 				DEF589861ED221520009B13B /* Info.plist */,
+				DEF589841ED221520009B13B /* PathFinderTests.swift */,
 			);
 			path = PathFinderTests;
 			sourceTree = "<group>";

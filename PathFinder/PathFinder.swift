@@ -12,9 +12,19 @@ class PathFinder: NSObject {
 
     class func numberOfUniquePaths(rows: Int, columns: Int) -> Int {
 
-        // base case
+        if (rows <= 0 || columns <= 0) {
+            // degenerate case, can't move
+            return 0
+        }
+
         if (rows == 1 && columns == 1) {
-            // we got to bottom corner, finished a path
+            // already at bottom corner goal, can't move
+            return 0
+        }
+
+        // base case
+        if (rows == 2 && columns == 1) || (rows == 1 && columns == 2) {
+            // next move must reach bottom corner goal and complete a path
             return 1
         }
 

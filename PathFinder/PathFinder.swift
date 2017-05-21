@@ -18,12 +18,12 @@ class PathFinder: NSObject {
             return 1
         }
 
-        if rows < 2 {
+        if rows == 1 {
             // can't move down, move right
             return numberOfUniquePaths(rows: rows, columns: columns - 1)
         }
 
-        if columns < 2 {
+        if columns == 1 {
             // can't move right, move down
             return numberOfUniquePaths(rows: rows - 1, columns: columns)
         }

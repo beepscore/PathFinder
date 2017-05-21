@@ -11,22 +11,19 @@ import XCTest
 
 class PathFinderTests: XCTestCase {
 
-    func testNumberOfUniquePaths() {
-
-        var rows = 2
-        var columns = 2
-        var numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:rows, columns:columns)
+    func testNumberOfUniquePaths2r2c() {
+        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:2, columns:2)
         XCTAssertEqual(numberOfUniquePaths, 2)
+    }
 
-        rows = 2
-        columns = 3
-        numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:rows, columns:columns)
+    func testNumberOfUniquePaths2r3c() {
+        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:2, columns:3)
         XCTAssertEqual(numberOfUniquePaths, 3)
+    }
 
-        rows = 3
-        columns = 3
-        numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:rows, columns:columns)
+    func testNumberOfUniquePaths3r3c() {
+        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:3, columns:3)
         XCTAssertEqual(numberOfUniquePaths, 6)
     }
-    
+
 }

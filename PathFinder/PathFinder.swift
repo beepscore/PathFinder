@@ -30,14 +30,17 @@ class PathFinder: NSObject {
 
         if rows == 1 {
             // can't move down, move right
+            // recurse by calling on board with 1 less column
             return numberOfUniquePaths(rows: rows, columns: columns - 1)
         }
 
         if columns == 1 {
             // can't move right, move down
+            // recurse by calling on board with 1 less row
             return numberOfUniquePaths(rows: rows - 1, columns: columns)
         }
 
+        // can move right, also can move down
         return numberOfUniquePaths(rows: rows - 1, columns: columns)
             + numberOfUniquePaths(rows: rows, columns: columns - 1)
     }

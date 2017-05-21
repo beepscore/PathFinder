@@ -10,6 +10,7 @@
 		DEF589801ED221520009B13B /* PathFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF589761ED221520009B13B /* PathFinder.framework */; };
 		DEF589851ED221520009B13B /* PathFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF589841ED221520009B13B /* PathFinderTests.swift */; };
 		DEF589871ED221520009B13B /* PathFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF589791ED221520009B13B /* PathFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEF589911ED221820009B13B /* PathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF589901ED221820009B13B /* PathFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		DEF5897F1ED221520009B13B /* PathFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF589841ED221520009B13B /* PathFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFinderTests.swift; sourceTree = "<group>"; };
 		DEF589861ED221520009B13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEF589901ED221820009B13B /* PathFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				DEF589791ED221520009B13B /* PathFinder.h */,
+				DEF589901ED221820009B13B /* PathFinder.swift */,
 				DEF5897A1ED221520009B13B /* Info.plist */,
 			);
 			path = PathFinder;
@@ -149,6 +152,7 @@
 					DEF589751ED221520009B13B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = J2LXK9FK3W;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					DEF5897E1ED221520009B13B = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF589911ED221820009B13B /* PathFinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +329,7 @@
 		DEF5898B1ED221520009B13B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J2LXK9FK3W;
@@ -336,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.beepscore.PathFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +350,7 @@
 		DEF5898C1ED221520009B13B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J2LXK9FK3W;
@@ -362,6 +370,7 @@
 		DEF5898E1ED221520009B13B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = J2LXK9FK3W;
 				INFOPLIST_FILE = PathFinderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +383,7 @@
 		DEF5898F1ED221520009B13B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = J2LXK9FK3W;
 				INFOPLIST_FILE = PathFinderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

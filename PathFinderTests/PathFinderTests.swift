@@ -51,4 +51,10 @@ class PathFinderTests: XCTestCase {
         XCTAssertEqual(numberOfUniquePaths, 155117520)
     }
 
+    // without memoization, this takes roughly 160 seconds to run
+    func testNumberOfUniquePaths18r18c() {
+        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:18, columns:18)
+        XCTAssertEqual(numberOfUniquePaths, 2333606220)
+    }
+
 }

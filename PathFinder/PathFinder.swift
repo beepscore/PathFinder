@@ -10,19 +10,6 @@ import Foundation
 
 class PathFinder: NSObject {
 
-    /// Given a key string, returns rows and columns in a tuple e.g. "3,12" returns (3,12)
-    /// This may be used to parse a dictionary key string into underlying rows and columns
-    ///
-    /// - Parameter key: represents rows and columns in a string for use as a dictionary key. Separator is ","
-    /// - Returns: tuple with rows and columns. returns nil if parse fails.
-    class func rowsAndColumns(key: String) -> (Int, Int)? {
-        let matrixSize = key.components(separatedBy: ",")
-        guard let rows = Int(matrixSize[0]), let columns = Int(matrixSize[1]) else {
-            return nil
-        }
-        return (rows, columns)
-    }
-
     /// Given rows and columns integers, returns key string e.g. 3, 12 returns "3,12"
     /// This method may be used to construct a key to memoize results in a dictionary
     ///

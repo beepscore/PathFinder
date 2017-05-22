@@ -36,4 +36,19 @@ class PathFinderTests: XCTestCase {
         XCTAssertEqual(numberOfUniquePaths, 6)
     }
 
+    func testNumberOfUniquePaths8r8c() {
+        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:8, columns:8)
+        XCTAssertEqual(numberOfUniquePaths, 3432)
+    }
+
+    // show Int.max on this machine
+    func testIntMax() {
+        XCTAssertEqual(Int.max, 9223372036854775807)
+    }
+
+    func testNumberOfUniquePaths16r16c() {
+        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:16, columns:16)
+        XCTAssertEqual(numberOfUniquePaths, 155117520)
+    }
+
 }

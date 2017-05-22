@@ -52,8 +52,23 @@ class PathFinderTests: XCTestCase {
     }
 
     // without memoization, this takes roughly 160 seconds to run
-    func testNumberOfUniquePaths18r18c() {
-        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:18, columns:18)
+//    func testNumberOfUniquePaths18r18c() {
+//        let numberOfUniquePaths = PathFinder.numberOfUniquePaths(rows:18, columns:18)
+//        XCTAssertEqual(numberOfUniquePaths, 2333606220)
+//    }
+
+    // MARK: - testNumberOfUniquePathsMemoized
+
+    func testNumberOfUniquePathsMemoized8r8c() {
+        var memoized: [String: Int] = Dictionary()
+        let numberOfUniquePaths = PathFinder.numberOfUniquePathsMemoized(rows:8, columns:8, memoized: &memoized)
+        XCTAssertEqual(numberOfUniquePaths, 3432)
+    }
+
+    // with memoization, this takes roughly 10 seconds to run
+    func testNumberOfUniquePathsMemoized18r18c() {
+        var memoized: [String: Int] = Dictionary()
+        let numberOfUniquePaths = PathFinder.numberOfUniquePathsMemoized(rows:18, columns:18, memoized: &memoized)
         XCTAssertEqual(numberOfUniquePaths, 2333606220)
     }
 

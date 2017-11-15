@@ -70,7 +70,6 @@ class PathFinder: NSObject {
     ///   - columns: columns
     ///   - memoized: dictionary of previous results. inout so method can add new key/value pair
     /// - Returns: number of unique paths from origin 0,0 to rows, columns
-    /// Given rows and columns integers, returns key string e.g. 3, 12 returns "3,12"
     class func numberOfUniquePathsMemoized(rows: Int, columns: Int, memoized: inout [String: Int]) -> Int {
 
         let key = PathFinder.key(rows: rows, columns: columns)
